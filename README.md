@@ -30,8 +30,34 @@ Models are evaluated using the weighted average F1 score, accounting for class i
 - scikit-learn
 
 - OpenCV
+  
+- Fairlearn, SHAP, Grad-CAM (for fairness and explainability)
 
 
+# Data Exploration
+Our training dataset includes metadata and image labels for 2,860 dermatology images, with each sample annotated by:
+
+- Skin condition label (21 unique conditions)
+
+- Fitzpatrick scale (1–6): a common dermatological measure of skin tone
+
+- DDI scale: a custom, more granular skin tone score
+
+- Three- and nine-partition labels: broader groupings for diagnosis categories
+
+- QC flags: quality control metadata (limited availability)
+
+
+# Preprocessing Steps
+To prepare the dataset, we:
+
+1. Verified data consistency and handled missing values
+
+2. Converted categorical labels into machine-learning-ready formats
+
+3. Applied data augmentation techniques (flipping, rotation, brightness adjustments) to boost diversity and address class imbalance
+
+4. Incorporated fitzpatrick_scale and ddi_scale into our fairness evaluation pipeline
 
 
 
