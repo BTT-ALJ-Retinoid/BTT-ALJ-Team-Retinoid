@@ -60,13 +60,34 @@ To prepare the dataset, we:
 4. Incorporated fitzpatrick_scale and ddi_scale into our fairness evaluation pipeline
 
 
+# Key Insights from EDA: 
+
+-  Skin Condition Distribution
+<img src="plots/label_distribution.png" alt="Skin Condition Distribution" width="600"/>
+- The dataset is imbalanced, with conditions like prurigo nodularis and seborrheic keratosis appearing far more frequently than others.
+
+- This imbalance can affect model performance, especially for underrepresented conditions—making techniques like class weighting or focal loss important.
+
+ - Fitzpatrick Skin Tone Distribution
+<img src="plots/fitzpatrick_distribution.png" alt="Fitzpatrick Scale Distribution" width="500"/>
+- Skin tones are unevenly distributed across the Fitzpatrick scale, with mid-tones (Types 3–5) being the most common.
+
+- Lighter and darker skin types are underrepresented, which may introduce bias in dermatology models unless explicitly corrected.
+
+-  DDI Scale Distribution
+<img src="plots/ddi_distribution.png" alt="DDI Scale Distribution" width="500"/>
+- The DDI scale provides more granularity than the Fitzpatrick scale.
+
+- However, the distribution is still skewed toward mid-range tones, reinforcing the need for inclusive model design.
 
 
 
 
-
-
-
+# Team Members 
+- Victoria Kim
+- Amanda Tsui
+- Yasmeen Shilbayeh
+- 
 
 
 
